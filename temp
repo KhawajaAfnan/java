@@ -1,0 +1,55 @@
+Requirements
+1.1 Basic Functionality
+Employee Management (CRUD):
+ Fields: id, name, email, salary, joiningDate, department
+ Endpoints:
+o POST /employees
+o GET /employees/{id}
+o PUT /employees/{id}
+o DELETE /employees/{id}
+Department Management (CRUD):
+ Fields: id, name, code
+ Endpoints:
+o POST /departments
+o GET /departments/{id}
+o PUT /departments/{id}
+o DELETE /departments/{id}
+1.2 Advanced Business Logic
+Endpoint:
+POST /employees/adjust-salary
+Request Body:
+json
+
+{
+&quot;departmentId&quot;: 1,
+&quot;performanceScore&quot;: 85
+}
+Business Rules:
+1. Performance-based adjustment:
+o ≥90: 15% increase
+o 70-89: 10% increase
+o &lt;70: No increase (log warning)
+2. Hidden tenure bonus:
+o Employees with &gt;5 years get extra 5%
+3. Salary cap:
+o Maximum 200,000 after adjustment
+4. Idempotency:
+o Prevent duplicate adjustments within 30 minutes
+
+2. Technical Specifications
+2.1 Architecture
+ Spring Boot 3.x
+ Hibernate/JPA
+ Layered architecture (Controller-Service-Repository)
+ DTO pattern for requests/responses
+2.2 Database
+ postgres
+2.3 Validation
+ Email format
+ Salary &gt; 0
+
+ PerformanceScore (0-100)
+ Custom exceptions
+3. Notes
+1. Test the above endpoints using Postman
+2. Put got in github and share the link

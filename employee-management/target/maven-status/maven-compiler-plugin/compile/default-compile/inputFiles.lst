@@ -1,0 +1,16 @@
+C:\Projects\java\employee-management\src\main\java\com\example\employee\dto\AdjustSalaryRequest.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\EmployeeManagementApplication.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\entity\Employee.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\service\DepartmentService.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\controller\DepartmentController.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\dto\EmployeeResponse.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\repository\DepartmentRepository.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\service\impl\DepartmentServiceImpl.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\dto\EmployeeRequest.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\service\EmployeeService.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\entity\Department.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\service\impl\EmployeeServiceImpl.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\controller\EmployeeController.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\dto\DepartmentResponse.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\dto\DepartmentRequest.java
+C:\Projects\java\employee-management\src\main\java\com\example\employee\repository\EmployeeRepository.java
