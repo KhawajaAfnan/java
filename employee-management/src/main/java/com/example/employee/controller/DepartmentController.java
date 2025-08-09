@@ -3,6 +3,9 @@ package com.example.employee.controller;
 import com.example.employee.dto.DepartmentRequest;
 import com.example.employee.dto.DepartmentResponse;
 import com.example.employee.service.DepartmentService;
+
+import jakarta.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,9 +19,9 @@ public class DepartmentController {
     private DepartmentService departmentService;
 
     @PostMapping
-    public ResponseEntity<DepartmentResponse> create(@RequestBody DepartmentRequest request) {
-        return ResponseEntity.ok(departmentService.createDepartment(request));
-    }
+    public ResponseEntity<DepartmentResponse> create( @RequestBody DepartmentRequest request) {
+    return ResponseEntity.ok(departmentService.createDepartment(request));
+}
 
     @GetMapping("/{id}")
     public ResponseEntity<DepartmentResponse> get(@PathVariable Long id) {
@@ -45,3 +48,5 @@ public class DepartmentController {
         return ResponseEntity.ok(departmentService.getAllDepartments());
     }
 }
+//cd employee-management
+//mvn spring-boot:run -e

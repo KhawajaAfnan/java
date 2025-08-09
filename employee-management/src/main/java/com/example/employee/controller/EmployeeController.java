@@ -3,6 +3,9 @@ package com.example.employee.controller;
 import com.example.employee.dto.EmployeeRequest;
 import com.example.employee.dto.EmployeeResponse;
 import com.example.employee.service.EmployeeService;
+
+import jakarta.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +19,7 @@ public class EmployeeController {
     private EmployeeService employeeService;
 
     @PostMapping
-    public ResponseEntity<EmployeeResponse> create(@RequestBody EmployeeRequest request) {
+    public ResponseEntity<EmployeeResponse> create(@Valid @RequestBody EmployeeRequest request) {
         return ResponseEntity.ok(employeeService.createEmployee(request));
     }
     
@@ -33,7 +36,7 @@ public class EmployeeController {
 }
 
     @PutMapping("/{id}")
-    public ResponseEntity<EmployeeResponse> update(@PathVariable Long id, @RequestBody EmployeeRequest request) {
+    public ResponseEntity<EmployeeResponse> update( @PathVariable Long id, @Valid @RequestBody EmployeeRequest request) {
         EmployeeResponse response = employeeService.updateEmployee(id, request);
         if (response == null) return ResponseEntity.notFound().build();
         return ResponseEntity.ok(response);

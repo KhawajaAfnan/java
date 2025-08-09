@@ -2,9 +2,17 @@ package com.example.employee.dto;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
+
 public class EmployeeRequest {
     private String name;
+    @NotBlank(message = "Email is required")
+    @Email(message = "Invalid email format")
     private String email;
+    @Min(value = 1, message = "Salary must be greater than  0")
     private double salary;
     private LocalDate joiningDate;
     private Long departmentId;
